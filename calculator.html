@@ -16,5 +16,27 @@
         <button type="button" class="btn" onclick="Calculate()">Calculate</button>
         <button type="button" class="btn" onclick="Clear()">Clear</button>
     </div>
+    <script>
+        function Calculate() {
+            const number1 = document.getElementById("num1")
+            const number2 = document.getElementById("num2")
+
+            const sum = parseInt(number1.value) + parseInt(number2.value)
+
+            const result = document.getElementById("result")
+            result.innerText = `Sum is: ${sum}`
+        }
+        function Clear() {
+            const number1 = document.getElementById("num1")
+            number1.value= ""
+
+            const number2 = document.getElementById("num2")
+            number2.value= ""
+
+            const result = document.getElementById("result")
+            result.innerText= ""
+        }
+    </script>
+
   </body>
 </html>
